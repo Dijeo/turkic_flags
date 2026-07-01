@@ -1,0 +1,27 @@
+name: turkic_flags
+description: A comprehensive Flutter package providing high-resolution SVG flags, metadata, and customizable widgets for all Turkic world states and historical empires.
+version: 1.0.2
+homepage: https://github.com/Dijeo/turkic_flags
+repository: https://github.com/Dijeo/turkic_flags
+issue_tracker: https://github.com/Dijeo/turkic_flags/issues
+
+topics:
+  - flags
+  - turkic
+  - svg
+  - widgets
+  - ui
+
+environment:
+  sdk: ^3.9.2
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
