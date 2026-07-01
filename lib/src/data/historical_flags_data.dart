@@ -2335,19 +2335,15 @@ class HistoricalFlagsData {
     nameEn: 'Timurid Empire',
     category: TurkicFlagCategory.historical,
     descriptionTr:
-        'Lacivert zemin üzerinde Timur\'un "Rastgari Ast" ilkesini ve üç kıtayı simgeleyen üç altın halka.',
+        'Gök mavisi zemin üzerinde Timur\'un "Rastgari Ast" ilkesini ve üç kıtayı simgeleyen üç beyaz daire.',
     descriptionEn:
-        'Deep blue field with three golden rings symbolizing Timur\'s motto and mastery over three continents.',
-    primaryColors: <Color>[
-      Color(0xFF003366),
-      Color(0xFFFEC50C),
-      Color(0xFFFFFFFF),
-    ],
+        'Sky blue field with three white circles symbolizing Timur\'s motto and mastery over three continents.',
+    primaryColors: <Color>[Color(0xFF0099FF), Color(0xFFFFFFFF)],
     aspectRatio: 1.5,
     svgData: r'''
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
-  <rect width="900" height="600" fill="#003366"/>
-  <g fill="none" stroke="#FEC50C" stroke-width="26" transform="translate(450,300)">
+  <rect width="900" height="600" fill="#0099FF"/>
+  <g fill="#FFFFFF" transform="translate(450,300)">
     <circle cx="0" cy="-65" r="55"/>
     <circle cx="-65" cy="45" r="55"/>
     <circle cx="65" cy="45" r="55"/>

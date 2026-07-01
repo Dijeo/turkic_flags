@@ -26,7 +26,7 @@ Projenizin `pubspec.yaml` bağımlılıklarına ekleyin:
 
 ```yaml
 dependencies:
-  turkic_flags: ^1.0.2
+  turkic_flags: ^1.0.3
 ```
 
 Veya terminalden doğrudan yükleyin:
