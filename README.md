@@ -13,6 +13,7 @@ A comprehensive Flutter package providing high-resolution vector (SVG) flags, me
 ## 🌟 Özellikler / Features
 
 - **⚡ Sıfır Kurulum (Zero-Config & Embedded SVG):** Tüm bayraklar paket içine gömülü vektörel veri olarak gelir. Projenizin `pubspec.yaml` dosyasında `assets:` tanımı yapmanıza gerek yoktur!
+- **🌐 %100 Web, WASM & Çoklu Platform Desteği:** Flutter'ın resmi `vector_graphics` motoru ve statik bellek içi önbellekleme mimarisi sayesinde Web, iOS, Android, macOS, Linux ve Windows üzerinde sıfır gecikme ile çalışır.
 - **📐 Sonsuz Ölçeklenebilirlik & Doğal Oran Koruma:** SVG tabanlı vektörel mimari sayesinde pikselleşme olmadan kristal netliğinde görüntü sağlar. Varsayılan olarak (`aspectRatio: null`) tüm bayraklar kendi resmi, tarihi ve otantik en-boy oranlarıyla (Örn: Kazakistan 2:1, Türkiye 3:2, Kırgızistan 5:3) deforme olmadan sergilenir. Grid, kart veya listelerde simetrik ve tekdüze bir görünüm elde etmek istediğinizde `aspectRatio: 1.5` veya `flagAspectRatio: 1.5` parametreleriyle tüm bayrakları milimetrik olarak aynı oranda simetrik bir alana sığdırabilirsiniz.
 - **🎨 Zengin Gölgelendirme ve Temalandırma:** `TurkicFlagWidget` ile çok katmanlı yumuşak gölgeler, parlama (glow) efektleri, özel kenarlıklar ve yuvarlatılmış köşeler kolayca uygulanabilir.
 - **🔍 Gelişmiş Arama ve Filtreleme:** `TurkicFlagsRepository` ile devlet adları, İngilizce/Türkçe açıklamalar ve kategoriler (Bağımsız, Özerk, Tarihi) arasında anlık arama yapılabilir.
@@ -26,7 +27,7 @@ Projenizin `pubspec.yaml` bağımlılıklarına ekleyin:
 
 ```yaml
 dependencies:
-  turkic_flags: ^1.0.3
+  turkic_flags: ^1.0.4
 ```
 
 Veya terminalden doğrudan yükleyin:

@@ -3,7 +3,9 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
+import 'package:vector_graphics/vector_graphics.dart';
+import 'package:vector_graphics_compiler/vector_graphics_compiler.dart' as vg;
 import '../data/turkic_flags_repository.dart';
 import '../models/turkic_flag_code.dart';
 import '../models/turkic_flag_properties.dart';
@@ -142,8 +144,8 @@ class TurkicFlagWidget extends StatelessWidget {
                 : null,
             borderRadius: effectiveRadius,
           ),
-          child: SvgPicture.string(
-            flag.svgData,
+          child: VectorGraphic(
+            loader: _TurkicFlagSvgLoader(flag.svgData),
             width: effectiveWidth,
             height: effectiveHeight,
             fit: fit,
@@ -172,4 +174,41 @@ class _FlagPlaceholder extends StatelessWidget {
       ),
     );
   }
+}
+
+class _TurkicFlagSvgLoader extends BytesLoader {
+  const _TurkicFlagSvgLoader(this.svg);
+
+  final String svg;
+
+  static final Map<String, Future<ByteData>> _cache =
+      <String, Future<ByteData>>{};
+
+  @override
+  Future<ByteData> loadBytes(BuildContext? context) {
+    return _cache.putIfAbsent(
+      svg,
+      () async {
+        final Uint8List compiled = vg.encodeSvg(
+          xml: svg,
+          debugName: 'TurkicFlagSvgLoader',
+          enableClippingOptimizer: false,
+          enableMaskingOptimizer: false,
+          enableOverdrawOptimizer: false,
+        );
+        return compiled.buffer.asByteData();
+      },
+    );
+  }
+
+  @override
+  int get hashCode => svg.hashCode;
+
+  @override
+  bool operator ==(Object other) {
+    return other is _TurkicFlagSvgLoader && other.svg == svg;
+  }
+
+  @override
+  String toString() => 'TurkicFlagSvgLoader(svgLength: ${svg.length})';
 }

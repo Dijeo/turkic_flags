@@ -1,3 +1,9 @@
+## 1.0.4
+
+* **100% Web & WASM Platform Support**: Removed all dependencies on `dart:io` and migrated SVG rendering engine to Flutter's official `vector_graphics` (`^1.2.2`) and `vector_graphics_compiler` (`^1.2.3`). Explicitly added `web` to supported platform definitions in `pubspec.yaml`.
+* **High-Performance Static Caching**: Implemented a custom vector graphics loader (`_TurkicFlagSvgLoader`) with in-memory static caching for compiled vector data, eliminating repeated XML parsing overhead and ensuring instant rendering across all platforms and test environments.
+* **Code Maintenance**: Cleaned up unnecessary imports to ensure zero static analysis warnings and 100% test coverage.
+
 ## 1.0.3
 
 * **16 Great Turkic Empires (16 Büyük Türk İmparatorluğu) Complete Set**: Added 11 missing historical empires under the historical category (`westernHun`, `europeanHun`, `whiteHun`, `avar`, `khazar`, `uyghurKhaganate`, `karakhanid`, `ghaznavid`, `khwarazmian`, `goldenHorde`, `timurid`, `mughal`), bringing the total repository count to 41 flags and completing the traditional 16 Great Turkic Empires set.
