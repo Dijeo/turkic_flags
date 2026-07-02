@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
 [![Flutter Platform](https://img.shields.io/badge/Platform-Flutter-02569B?logo=flutter)](https://flutter.dev)
 
+![Turkic Flags Showcase](https://raw.githubusercontent.com/Dijeo/turkic_flags/main/turkic_flags.png)
+
 **Tüm Türk Dünyası bayraklarını**, özerk cumhuriyetlerini ve tarihi Türk imparatorluklarını yüksek çözünürlüklü **vektörel (SVG)** formatta sunan, özelleştirilebilir bileşenlerle (widget) donatılmış kapsamlı Flutter eklenti ve kütüphanesi.
 
 A comprehensive Flutter package providing high-resolution vector (SVG) flags, metadata, and customizable widgets for all sovereign Turkic states, autonomous republics, and historical steppe empires.
@@ -27,7 +29,7 @@ Projenizin `pubspec.yaml` bağımlılıklarına ekleyin:
 
 ```yaml
 dependencies:
-  turkic_flags: ^1.0.4
+  turkic_flags: ^1.0.5
 ```
 
 Veya terminalden doğrudan yükleyin:

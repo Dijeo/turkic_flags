@@ -1,3 +1,7 @@
+## 1.0.5
+
+* **Documentation & Visual Showcase**: Added high-resolution visual showcase screenshot (`turkic_flags.png`) to the very top of `README.md` for both GitHub and pub.dev documentation pages.
+
 ## 1.0.4
 
 * **100% Web & WASM Platform Support**: Removed all dependencies on `dart:io` and migrated SVG rendering engine to Flutter's official `vector_graphics` (`^1.2.2`) and `vector_graphics_compiler` (`^1.2.3`). Explicitly added `web` to supported platform definitions in `pubspec.yaml`.
